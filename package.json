@@ -1,0 +1,21 @@
+{
+  "name": "glaze",
+  "version": "0.0.0",
+  "description": "The database-agnostic caching layer for Mongoose",
+  "main": "/lib/index.js",
+  "scripts": {
+    "test": "-nil"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrejewski/glaze.git"
+  },
+  "keywords": [
+    "glaze",
+    "cache",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "Chris Andrejewski",
+  "license": "BSD"
+}
