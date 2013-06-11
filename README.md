@@ -2,9 +2,9 @@
 The database-agnostic caching layer for [Mongoose](http://mongoosejs.com/).
 
 ## How and Why
-Glaze was made to work seamlessly with Mongoose in providing a layer of caching on top of the already fast MongoDB. The  concept of Glaze is very simple: a mongoose model has relational data is that either changing to quickly or not best stored to be queued and calculated through only MongoDB. Glaze can theoretically store any data in key-value sense, but was created with realtime(ish) counts, indexes, and joins in mind that can take advantage of the speed of caching.
+Glaze was made to work seamlessly with Mongoose in providing a layer of caching on top of the already fast MongoDB. The  concept of Glaze is very simple: a mongoose model has relational data is that either changing to quickly or not best stored to be queued and calculated through only MongoDB. Glaze can theoretically store any data in the key-value sense, but was created with realtime(ish) counts, indexes, and joins in mind that can take advantage of the speed of caching.
 
-Glaze is most like a cached data layer; you call for that layer to computed on top of the current Mongoose model and the data is filled in using the provided cache. That's why I named it Glaze.
+Glaze is most like a cached data layer; you call for that layer to be computed on top of the current Mongoose model and the data is filled in using the provided cache. That's why I named it Glaze.
 
 Glaze is database-agnostic in how it interacts with the caching layer and its own mechanisms. Although Glaze was originally only for Redis caching, Glaze has been reformatted to work with any database that can meet the Glaze Interface Format. See the 'Glaze Interface Format' section for more details as to what is supported and what can be supported by viewers like you.
 
