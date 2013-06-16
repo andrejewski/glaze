@@ -6,8 +6,10 @@ redis = require redis;
 # Interface
 module.exports = Interface
 
-Interface.init = (options) ->
-	this.client = redis.createClient(options)
+Interface.init = (setup, next) ->
+	{port, host, options} = setup
+	this.client = redis.createClient port, host, options
+	next()
 
 Interface.write = (model, key, value, next) ->
 	client = this.client

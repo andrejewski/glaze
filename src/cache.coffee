@@ -12,15 +12,15 @@ module.exports = (gif) ->
 	class Cache 
 		constructor: (@model, @attributes = {}, options) ->
 			if (!(this instanceof Cache)) 
-				return new Cache(@model, @attributes, @redit);
+				return new Cache(@model, @attributes, options);
 
-			db.init options
-			
-			a = _ @attributes
-			@keys = a.keys
-			@calc = a.values
+			db.init options, (err) =>
+				throw err if err
+				a = _ @attributes
+				@keys = a.keys
+				@calc = a.values
 
-			this.attach()
+				@attach()
 
 		attach: ->
 			operations = ['cache','cast']

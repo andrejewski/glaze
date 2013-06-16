@@ -5,6 +5,8 @@ module.exports =
 	Cache : require './cache'
 	Redis : ->
 		require './redis'
+	Memcached : ->
+		require './memcached'
 
 
 

@@ -60,14 +60,15 @@ glazedModel.cast(function(model, changes) {
 
 ### Current Built-in GIFs
 - Redis
+- memcached
 
 ### How to GIF
 Borrowing from Go (Golang), GIF is any object that meets the following method requirements:
 
 - interface#init:
 ``` javascript
-> (options object)
-< returns undefined
+> (options object, next function)
+< next(err)
 ```
 This function is called on the initialization of an interface. This is where connection or client of the database should be established and in some way attached to the interface object.
 
